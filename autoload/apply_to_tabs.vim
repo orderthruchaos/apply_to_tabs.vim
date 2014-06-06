@@ -15,7 +15,6 @@ function! apply_to_tabs#WinDoCall(win_func, ...) " {{{
   let Fn = function(a:win_func)
   let wn = winnr()
 
-  " windo :call Fn()
   windo :call call(Fn, a:000)
 
   exec ":normal! " . wn . "\<c-w>w"
@@ -28,9 +27,7 @@ function! apply_to_tabs#TabDoCall(tab_func, ...) " {{{
   let tn = tabpagenr()
   let wn = winnr()
 
-  " tabdo :call Fn()
   tabdo :call call(Fn, a:000)
-  " tabdo :call call(a:tab_func, a:000)
 
   exec ":normal! " . tn . "gt\n"
   exec ":normal! " . wn . "\<c-w>w"
@@ -42,7 +39,6 @@ function! apply_to_tabs#TabDoWinDoCall(tab_win_func, ...) " {{{
   let tn = tabpagenr()
   let wn = winnr()
 
-  " tabdo :call Fn()
   tabdo :windo :call call(Fn, a:000)
 
   exec ":normal! " . tn . "gt\n"
