@@ -1,0 +1,19 @@
+*apply_to_tabs*     A library for applying Vim functions to every tab and/or
+                  window.
+
+				*apply_to_tabs.vim*
+
+Apply a function to every Vim tab and/or window.
+
+1.  Autoload					|apply_to_tabs-autoload|
+
+
+
+==============================================================================
+1.  Autoload					*apply_to_tabs-autoload*
+
+
+apply_to_tabs#WinDoCall({WinFunc})		*apply_to_tabs#WinDoCall*
+apply_to_tabs#TabDoCall({TabFunc}, [each_win])	*apply_to_tabs#TabDoCall*
+
+ vim:tw=78:ts=8:ft=help:norl:
