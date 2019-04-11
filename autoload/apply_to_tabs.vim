@@ -29,7 +29,7 @@ function! apply_to_tabs#TabDoCall(tab_func, ...) " {{{
 
   tabdo :call call(Fn, a:000)
 
-  exec ":normal! " . tn . "gt\n"
+  exec ":normal! " . tn . "gt"
   exec ":normal! " . wn . "\<c-w>w"
 endfunction " }}}
 
@@ -41,7 +41,7 @@ function! apply_to_tabs#TabDoWinDoCall(tab_win_func, ...) " {{{
 
   tabdo :windo :call call(Fn, a:000)
 
-  exec ":normal! " . tn . "gt\n"
+  exec ":normal! " . tn . "gt"
   exec ":normal! " . wn . "\<c-w>w"
 endfunction " }}}
 
